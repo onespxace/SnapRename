@@ -1,0 +1,178 @@
+@import "tailwindcss";
+
+/* ============================================================
+   Apple-style Design System — frosted glass + refined typography
+   ============================================================ */
+@theme {
+  --color-bg: var(--tw-bg);
+  --color-surface: var(--tw-surface);
+  --color-surface-raised: var(--tw-surface-raised);
+  --color-surface-overlay: var(--tw-surface-overlay);
+  --color-text-primary: var(--tw-text-primary);
+  --color-text-secondary: var(--tw-text-secondary);
+  --color-text-dim: var(--tw-text-dim);
+  --color-primary: var(--tw-primary);
+  --color-primary-hover: var(--tw-primary-hover);
+  --color-primary-muted: var(--tw-primary-muted);
+  --color-success: var(--tw-success);
+  --color-warning: var(--tw-warning);
+  --color-error: var(--tw-error);
+  --color-border: var(--tw-border);
+  --color-border-hover: var(--tw-border-hover);
+  --color-border-focus: var(--tw-border-focus);
+  --font-sans: "SF Pro Display", "SF Pro Text", -apple-system, "PingFang SC", "Noto Sans SC", "Microsoft YaHei UI", system-ui, sans-serif;
+}
+
+/* ============================================================
+   Light theme (default)
+   ============================================================ */
+:root, [data-theme="light"] {
+  --tw-bg: #f2f2f7;
+  --tw-surface: rgba(255, 255, 255, 0.78);
+  --tw-surface-raised: rgba(255, 255, 255, 0.92);
+  --tw-surface-overlay: rgba(255, 255, 255, 0.96);
+  --tw-text-primary: #1d1d1f;
+  --tw-text-secondary: #6e6e73;
+  --tw-text-dim: #aeaeb2;
+  --tw-primary: #0071e3;
+  --tw-primary-hover: #0077ed;
+  --tw-primary-muted: rgba(0, 113, 227, 0.10);
+  --tw-success: #34c759;
+  --tw-warning: #ff9f0a;
+  --tw-error: #ff3b30;
+  --tw-border: rgba(0, 0, 0, 0.06);
+  --tw-border-hover: rgba(0, 0, 0, 0.10);
+  --tw-border-focus: #0071e3;
+}
+
+/* ============================================================
+   Dark theme
+   ============================================================ */
+[data-theme="dark"] {
+  --tw-bg: #0d0d11;
+  --tw-surface: rgba(28, 28, 34, 0.72);
+  --tw-surface-raised: rgba(44, 44, 54, 0.72);
+  --tw-surface-overlay: rgba(38, 38, 48, 0.88);
+  --tw-text-primary: #f5f5f7;
+  --tw-text-secondary: #98989d;
+  --tw-text-dim: #63636b;
+  --tw-primary: #0a84ff;
+  --tw-primary-hover: #409cff;
+  --tw-primary-muted: rgba(10, 132, 255, 0.15);
+  --tw-success: #30d158;
+  --tw-warning: #ff9f0a;
+  --tw-error: #ff453a;
+  --tw-border: rgba(255, 255, 255, 0.08);
+  --tw-border-hover: rgba(255, 255, 255, 0.13);
+  --tw-border-focus: #0a84ff;
+}
+
+/* ============================================================
+   Light theme — Apple's characteristic warm light palette
+   ============================================================ */
+[data-theme="light"] {
+  --tw-bg: #f2f2f7;
+  --tw-surface: rgba(255, 255, 255, 0.78);
+  --tw-surface-raised: rgba(255, 255, 255, 0.92);
+  --tw-surface-overlay: rgba(255, 255, 255, 0.96);
+  --tw-text-primary: #1d1d1f;
+  --tw-text-secondary: #6e6e73;
+  --tw-text-dim: #aeaeb2;
+  --tw-primary: #0071e3;
+  --tw-primary-hover: #0077ed;
+  --tw-primary-muted: rgba(0, 113, 227, 0.10);
+  --tw-success: #34c759;
+  --tw-warning: #ff9f0a;
+  --tw-error: #ff3b30;
+  --tw-border: rgba(0, 0, 0, 0.06);
+  --tw-border-hover: rgba(0, 0, 0, 0.10);
+  --tw-border-focus: #0071e3;
+}
+
+/* ============================================================
+   High-contrast theme — maximum readability
+   ============================================================ */
+[data-theme="highcontrast"] {
+  --tw-bg: #000000;
+  --tw-surface: #1a1a1a;
+  --tw-surface-raised: #2a2a2a;
+  --tw-surface-overlay: #0d0d0d;
+  --tw-text-primary: #ffffff;
+  --tw-text-secondary: #e0e0e0;
+  --tw-text-dim: #b0b0b0;
+  --tw-primary: #ffd700;
+  --tw-primary-hover: #ffe44d;
+  --tw-primary-muted: rgba(255, 215, 0, 0.20);
+  --tw-success: #00ff88;
+  --tw-warning: #ff8800;
+  --tw-error: #ff4444;
+  --tw-border: rgba(255, 255, 255, 0.25);
+  --tw-border-hover: rgba(255, 255, 255, 0.40);
+  --tw-border-focus: #ffd700;
+}
+
+/* ============================================================
+   shadcn/ui compatible base variables
+   ============================================================ */
+:root {
+  --background: var(--tw-bg);
+  --foreground: var(--tw-text-primary);
+  --card: var(--tw-surface);
+  --card-foreground: var(--tw-text-primary);
+  --border: var(--tw-border);
+  --input: var(--tw-surface-raised);
+  --ring: var(--tw-primary);
+  --radius: 0.75rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background: var(--tw-bg);
+  color: var(--tw-text-primary);
+  overflow: hidden;
+  user-select: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Backdrop blur base — Apple's signature frosted glass */
+.glass {
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+}
+
+/* Selection color — Apple blue */
+::selection {
+  background: var(--tw-primary);
+  color: #fff;
+}
+
+/* Custom scrollbar — thin, apple-style */
+::-webkit-scrollbar {
+  height: 5px;
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--tw-border-hover);
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--tw-text-dim);
+}
+
+/* Smooth transitions globally for interactive elements */
+input, select, button, a {
+  transition: all 0.15s ease;
+}
+
+input:focus, select:focus {
+  box-shadow: 0 0 0 3px var(--tw-primary-muted);
+}
