@@ -1,0 +1,10 @@
+{
+  "name": "default",
+  "segments": [
+    {
+      "type": "TEXT",
+      "label": "固定文本",
+      "text": ""
+    }
+  ]
+}

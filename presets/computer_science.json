@@ -1,0 +1,38 @@
+{
+  "name": "computer_science",
+  "segments": [
+    {
+      "type": "EXTRACT",
+      "label": "学号",
+      "extract_field": "学号",
+      "extract_min_len": 6,
+      "extract_max_len": 12,
+      "extract_allow_alpha": false,
+      "extract_allow_digit": true
+    },
+    {
+      "type": "TEXT",
+      "label": "分隔符",
+      "text": "_"
+    },
+    {
+      "type": "EXTRACT",
+      "label": "姓名",
+      "extract_field": "姓名",
+      "extract_min_len": 2,
+      "extract_max_len": 4,
+      "extract_allow_alpha": false,
+      "extract_allow_digit": false
+    },
+    {
+      "type": "TEXT",
+      "label": "分隔符",
+      "text": "_"
+    },
+    {
+      "type": "EXTRACT",
+      "label": "作业编号",
+      "extract_field": "作业编号"
+    }
+  ]
+}
